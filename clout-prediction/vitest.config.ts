@@ -7,10 +7,7 @@ import {
 export default defineConfig({
   test: {
     environment: "clarinet",
-    // We changed 'forks' to 'threads' to stop the crash
-    pool: "threads",
-    isolate: false,
-    maxWorkers: 1,
+    fileParallelism: false, 
     setupFiles: [
       vitestSetupFilePath,
     ],
