@@ -1,7 +1,7 @@
 [project]
 name = 'clout_prediction'
 description = ''
-authors = [jadonamite]
+authors = ["jadonamite"]
 telemetry = true
 cache_dir = './.cache'
 requirements = []
