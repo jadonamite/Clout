@@ -102,3 +102,7 @@
 (define-read-only (get-user-clout (user principal))
   (ok (get-clout user))
 )
+
+(define-read-only (get-last-market-id)
+  (ok (var-get market-counter))
+)
