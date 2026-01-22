@@ -54,13 +54,14 @@ describe('Clout Prediction Market', () => {
       deployer
     );
     expect(balanceResponse.result).toBeOk(Cl.uint(150));
-  });
-});
-// 6. Verify Market Count
+
+    // 6. Verify Market Count (Should be 1 because we created market u0)
     const countResponse = simnet.callReadOnlyFn(
       'clout-prediction',
       'get-last-market-id',
       [],
       deployer
     );
-    expect(countResponse.result).toBeOk(Cl.uint(1)); // Should be 1 because we created market u0
+    expect(countResponse.result).toBeOk(Cl.uint(1));
+  });
+});
